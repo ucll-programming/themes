@@ -1,11 +1,22 @@
+$background-color: #242424;
+$text-color: white;
+$inline-code-background: rgba(80, 80, 80, 0.5);
 $sidebar-width: 200px;
-$selection-foreground-color: #800;
+$sidebar-selected-item-foreground-color: #800;
 $section-background: #888;
 $explanation-background: #AAF;
 $exercise-pass-background:  #AFA;
 $exercise-fail-background: #FAA;
 $exercise-unknown-background: #AAA;
 
+// Admonition blocks
+$warning-background: maroon;
+$important-background: peru;
+$video-background: darkslategray;
+$question-background: #544;
+$task-background: royalblue;
+$info-background: darkcyan;
+$example-background: #AAF;
 
 #root {
   max-width: 1000px;
@@ -18,8 +29,8 @@ $exercise-unknown-background: #AAA;
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: $text-color;
+  background-color: $background-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +49,7 @@ p {
 
 p,li {
   code {
-    background: rgba(80, 80, 80, 0.5);
+    background: $inline-code-background;
     padding: 2px 4px;
     font-family: 'Courier New', Courier, monospace;
   }
@@ -175,15 +186,6 @@ p,li {
   }
 }
 
-#control-panel {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100px;
-  height: 100px;
-  background: black;
-}
-
 .overview-root-container {
   a {
     text-decoration: none;
@@ -252,7 +254,7 @@ p,li {
     &.selected {
       & > .overview-entry-header {
         & > a {
-          color: $selection-foreground-color;
+          color: $sidebar-selected-item-foreground-color;
           font-weight: 600;
         }
       }
@@ -366,31 +368,31 @@ p,li {
   }
 
   &.warning {
-    background: maroon;
+    background: $warning-background;
   }
 
   &.important {
-    background: peru;
+    background: $important-background;
   }
 
   &.video {
-    background: darkslategray;
+    background: $video-background;
   }
 
   &.question {
-    background: yellowgreen;
+    background: $question-background;
   }
 
   &.task {
-    background: royalblue;
+    background: $task-background;
   }
 
   &.info {
-    background: darkcyan;
+    background: $info-background;
   }
 
   &.example {
-    background: #AAF;
+    background: $example-background;
   }
 }
 
