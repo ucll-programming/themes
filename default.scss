@@ -55,6 +55,15 @@ p,li {
   }
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  height: 80%;
+  text-align: center;
+}
+
 .centered {
   display: flex;
   justify-content: center;
