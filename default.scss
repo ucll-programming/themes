@@ -11,12 +11,13 @@ $exercise-unknown-background: #AAA;
 
 // Admonition blocks
 $warning-background: maroon;
-$important-background: peru;
+$important-background:  rgb(200, 120, 40);
 $video-background: darkslategray;
 $question-background: #544;
 $task-background: royalblue;
 $info-background: darkcyan;
-$example-background: #AAF;
+$example-background: rgb(120, 120, 240);
+$link-color: black;
 
 #root {
   max-width: 1000px;
@@ -374,6 +375,9 @@ p,li {
 
   & .admonition-body {
     padding: 0.2em 1em;
+    a {color: $link-color;
+      font-weight: bold;
+    }
   }
 
   &.warning {
